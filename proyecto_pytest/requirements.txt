@@ -1,2 +1,4 @@
-pytest
-pytest-html
+# requirements.txt
+pytest==7.4.4
+pytest-html==4.1.1
+requests
