@@ -10,7 +10,7 @@ fi
 
 
 echo "instalando dependencias"
-
+source venv/bin/activate
 pip install --upgrade pip --break-system-packages
 pip install -r requirements.txt --break-system-packages
 
