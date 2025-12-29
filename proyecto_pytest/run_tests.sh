@@ -8,7 +8,7 @@ fi
 if [ -f "venv/bin/activate" ]; then
     source venv/bin/activate
 elif [ -f "venv/Scripts/activate" ]; then
-    source venv/Scripts/activate
+    venv/Scripts/activate
 else
     echo "No se pudo encontrar el script de activación del entorno virtual."
     exit 1
