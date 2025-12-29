@@ -11,8 +11,6 @@ fi
 
 echo "instalando dependencias"
 
-venv/bin/pip install --upgrade pip --break-system-packages
-venv/bin/pip install -r requirements.txt --break-system-packages
 pip install --upgrade pip --break-system-packages
 pip install -r requirements.txt --break-system-packages
 
