@@ -15,6 +15,8 @@ pip install --upgrade pip --break-system-packages
 pip install pytest pytest-html requests --break-system-packages
 pip install -r requirements.txt --break-system-packages
 echo "Ejecutando pruebas con pytest"
+echo "version de python"
+venv/bin/python --version
 venv/bin/python -m pytest tests/  --junitxml=reports/test_results.xml --html=reports/test-results.html --self-contained-html
 
 echo "pruebas Finalizadas  resultados en reports"
