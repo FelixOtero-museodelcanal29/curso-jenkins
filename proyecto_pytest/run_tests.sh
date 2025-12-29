@@ -1,18 +1,13 @@
-#!/bin/bash
-echo "Iniciando script de pruebas"
+#! /bin/bash
+
+echo "Iniciando script de pruebas en jenkins..."
+
+# Verificar si el entorno virtual existe
 if [ ! -d "venv" ]; then
     echo "Creando entorno virtual"
     python3 -m venv venv
 fi
-# Activar el entorno virtual
-if [ -f "venv/bin/activate" ]; then
-    source venv/bin/activate
-elif [ -f "venv/Scripts/activate" ]; then
-    source venv/Scripts/activate
-else
-    echo "No se pudo encontrar el script de activación del entorno virtual."
-    exit 1
-fi
+
 
 echo "instalando dependencias"
 pip install --upgrade pip --break-system-packages
