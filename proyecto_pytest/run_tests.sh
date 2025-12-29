@@ -1,31 +1,24 @@
 #!/bin/bash
-set -e  # Detener el script si cualquier comando falla
-
 echo "Iniciando script de pruebas"
-
-# Crear directorio de reportes si no existe
-mkdir -p reports
-
-# Crear entorno virtual si no existe
 if [ ! -d "venv" ]; then
-    echo "Creando entorno virtual..."
+    echo "Creando entorno virtual"
     python3 -m venv venv
 fi
-
-# Activar entorno virtual (solo Linux/macOS en este caso)
+# Activar el entorno virtual
 if [ -f "venv/bin/activate" ]; then
-    echo "Activando entorno virtual..."
     source venv/bin/activate
+elif [ -f "venv/Scripts/activate" ]; then
+    source venv/Scripts/activate
 else
-    echo "ERROR: No se encontró el entorno virtual. ¿Estás en Windows?"
+    echo "No se pudo encontrar el script de activación del entorno virtual."
     exit 1
 fi
 
-echo "Actualizando pip e instalando dependencias..."
-pip install --upgrade pip
-pip install -r requirements.txt
+echo "instalando dependencias"
+pip install --upgrade pip --break-system-packages
+pip install -r requirements.txt --break-system-packages
 
-echo "Ejecutando pruebas con pytest..."
-pytest tests/ --junitxml=reports/test_results.xml --html=reports/test-results.html --self-contained-html
+echo "Ejecutando pruebas con pytest"
+pytest tests/  --junitxml=reports/test_results.xml --html=reports/test-results.html --self-contained-html
 
-echo "Pruebas finalizadas. Resultados en el directorio 'reports/'."
+echo "pruebas Finalizadas  resultados en reports"
