@@ -27,6 +27,6 @@ fi
 echo "Ejecutando pruebas con pytest..."
 python --version
 # Usamos 'python -m pytest' para asegurar que use el pytest del venv
-python -m pytest tests/ --junitxml=reports/test_results.xml --html=reports/test-results.html --self-contained-html
+python -m pytest test/ --junitxml=reports/test_results.xml --html=reports/test-results.html --self-contained-html
 
 echo "Pruebas finalizadas. Resultados en la carpeta 'reports'."
