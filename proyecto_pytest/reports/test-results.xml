@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="4" time="0.088" timestamp="2025-12-30T15:47:37.168790-05:00" hostname="GTEC-LT-002"><testcase classname="test.test_multiplicacion" name="test_multiplicacion" time="0.001" /><testcase classname="test.test_multiplicacion" name="test_multiplicacion_fail" time="0.001"><failure message="assert 6 == 5&#10; +  where 6 = multiplicacion(2, 3)">def test_multiplicacion_fail():
+&gt;       assert multiplicacion(2, 3) == 5  # Esta prueba está diseñada para fallar
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       assert 6 == 5
+E        +  where 6 = multiplicacion(2, 3)
+
+test\test_multiplicacion.py:13: AssertionError</failure></testcase><testcase classname="test.test_suma" name="test_suma" time="0.000" /><testcase classname="test.test_suma" name="test_suma_fail" time="0.000"><failure message="assert 3 == 4&#10; +  where 3 = suma(1, 2)">def test_suma_fail():
+&gt;       assert suma(1,2) == 4  # Esta prueba está diseñada para fallar
+        ^^^^^^^^^^^^^^^^^^^^^
+E       assert 3 == 4
+E        +  where 3 = suma(1, 2)
+
+test\test_suma.py:14: AssertionError</failure></testcase></testsuite></testsuites>

@@ -23,9 +23,10 @@ if [ -f "requirements.txt" ]; then
     pip install -r requirements.txt
 fi
 
+mkdir -p reports
+
 # 4. Ejecutar pruebas
 echo "Ejecutando pruebas con pytest..."
-python --version
 # Usamos 'python -m pytest' para asegurar que use el pytest del venv
 python -m pytest test/ --junitxml=reports/test-results.xml --html=reports/report.html --self-contained-html
 
