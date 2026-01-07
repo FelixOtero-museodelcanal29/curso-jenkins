@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd primer-pipeline/mi-proyecto && mvn clean install'
+                sh 'cd mi-proyecto && mvn clean install'
             }
         }
         stage('Test') {
             steps {
-                sh 'cd primer-pipeline/mi-proyecto && mvn test'
+                sh 'cd mi-proyecto && mvn test'
             }
         }
         stage('Deploy') {
